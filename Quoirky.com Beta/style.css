@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Cytone';
+    src: url("Cytone-Regular.ttf") format("truetype");
+  }
+
+  /* header */
+
+  #header {
+    background-repeat: no-repeat;
+    background-size: 9%;
+    width: auto;
+    text-shadow: 6px 6px #0091ff;
+  }
+  
+  
+  
+  /* header text */
+  
+  #header,
+  .text-container {
+    display: flex;
+    font-family: 'Cytone';
+    color: white;
+    font-size: calc(16px + 2.5vw);
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    scale: 90%;
+  
+  }
+
+  body {
+    background-color: #0000FF; /* Default bright mode color */
+    transition: background-color 0.3s ease;
+  }
+  .night-mode {
+    background-color: black; /* Night mode color */
+  }
+  .btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain; /* Adjust to 'cover' if necessary */
+  }
+/* Start https://www.cursors-4u.com */
+* {
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur25.ani), url(https://cur.cursors-4u.net/cursors/cur-1/cur25.png), auto !important;
+  }
+  
+  /* End https://www.cursors-4u.com */
+
+  
