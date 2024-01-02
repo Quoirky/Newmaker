@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- State of The Bringing The Project To It's Original State (2000-2014) is Currently in InfDev -->
+<!-- State of The Bringing The Project To It's Original State (2000-2014) is Currently in BETA -->
 <html lang="en">
 <link href="style.css" rel="stylesheet"/>
 <link href="additional.css" rel="stylesheet">
@@ -15,20 +15,42 @@
               <iframe src="https://player.twitch.tv/?channel=quoirky&parent=quoirky.com" style="float: left; width: 75%; aspect-ratio: 16/9;"></iframe>
               <iframe id="twitch-chat-embed" src="https://www.twitch.tv/embed/quoirky/chat?darkpopout&parent=quoirky.com" style="float: left; width: 350px; height: 774px;"></iframe>
             </div>
-            <button class="btn" onclick="toggleNightMode()" style="background-color: #0000FF; background-image: url('/world.gif');"></button>
-  <script>
-    function toggleNightMode() {
-      var body = document.querySelector('body');
-      body.classList.toggle('night-mode');
-      
-      var btn = document.querySelector('.btn');
-      var currentMode = body.classList.contains('night-mode') ? 'night-mode' : 'bright-mode';
-      
-      var image = currentMode === 'night-mode' ? '/moon.gif' : '/world.gif';
-      btn.style.backgroundImage = `url(${image})`;
-      btn.style.backgroundColor = currentMode === 'night-mode' ? 'black' : '#0000FF';
+            <button class="btn" onclick="toggleNightMode()" style="background-color: black; background-image: url('/moon.gif');"></button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Set dark mode by default
+    setNightMode(true);
+  });
+
+  function toggleNightMode() {
+    var body = document.querySelector('body');
+    body.classList.toggle('night-mode');
+    
+    // Check if night mode is enabled after toggle
+    var isNightMode = body.classList.contains('night-mode');
+    
+    // Set the new mode
+    setNightMode(isNightMode);
+  }
+
+  function setNightMode(isNightMode) {
+    var btn = document.querySelector('.btn');
+    var body = document.querySelector('body');
+
+    if (isNightMode) {
+      // Night mode
+      body.classList.add('night-mode');
+      btn.style.backgroundImage = "url('/moon.gif')";
+      btn.style.backgroundColor = 'black';
+    } else {
+      // Bright mode
+      body.classList.remove('night-mode');
+      btn.style.backgroundImage = "url('/world.gif')";
+      btn.style.backgroundColor = '#0000FF';
     }
-  </script>
+  }
+</script>
     <script>
       const fetch = require('node-fetch');
 
