@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <!-- State of The Bringing The Project To It's Original State (2000-2014) is Currently in BETA -->
 <html lang="en">
-<link href="style.css" rel="stylesheet" />
-<link href="additional.css" rel="stylesheet">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
+<link href="/css/style.css" rel="stylesheet"/>
+<link href="/css/additional.css" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 <head>
-
 <body>
     <title>Quoirky: Early Access</title>
     <div id="header">
@@ -19,70 +17,9 @@
         <iframe id="twitch-chat-embed" src="https://www.twitch.tv/embed/quoirky/chat?darkpopout&parent=quoirky.com"
             style="float: left; width: 350px; height: 774px;"></iframe>
     </div>
-    <button class="btn" onclick="toggleNightMode()" style="background-color: black; background-image: url('/moon.gif');"></button>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    // Check if user has a preference stored in local storage
-    var isNightMode = localStorage.getItem('nightMode') === 'true';
-
-    // Set the mode based on the stored preference or default to dark mode
-    setNightMode(isNightMode);
-  });
-
-  function toggleNightMode() {
-    var body = document.querySelector('body');
-    body.classList.toggle('night-mode');
-    
-    // Check if night mode is enabled after toggle
-    var isNightMode = body.classList.contains('night-mode');
-    
-    // Store the user's preference in local storage
-    localStorage.setItem('nightMode', isNightMode);
-
-    // Set the new mode
-    setNightMode(isNightMode);
-  }
-
-  function setNightMode(isNightMode) {
-    var btn = document.querySelector('.btn');
-    var body = document.querySelector('body');
-
-    if (isNightMode) {
-      // Night mode
-      body.classList.add('night-mode');
-      btn.style.backgroundImage = "url('/moon.gif')";
-      btn.style.backgroundColor = 'black';
-    } else {
-      // Bright mode
-      body.classList.remove('night-mode');
-      btn.style.backgroundImage = "url('/world.gif')";
-      btn.style.backgroundColor = '#0000FF';
-    }
-  }
-    </script>
-    <script>
-        const fetch = require('node-fetch');
-
-      const channelName = 'Quoirky';
-
-      async function checkStreamStatus() {
-    try {
-    const response = await fetch(`https://www.twitch.tv/${channelName}`);
-    const text = await response.text();
-
-    if (text.includes('"isLiveBroadcast":true')) {
-      console.log(`${channelName} is live`);
-    } else {
-      console.log(`${channelName} is not live`);
-    }
-  } catch (error) {
-    console.error('Error fetching Twitch page:', error);
-  }
-}
-checkStreamStatus();
-    </script>
-
+    <button class="btn" onclick="toggleNightMode()" style="background-color: black; background-image: url('/images/4444/moon.gif');"></button>
+    <script src="/javascript/darkmode.js"></script>
+    <script src="/javascript/isLiveBroadcast.js"></script>
 </body>
 </head>
 </html>
