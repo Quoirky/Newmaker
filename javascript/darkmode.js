@@ -23,16 +23,22 @@
   function setNightMode(isNightMode) {
     var btn = document.querySelector('.btn');
     var body = document.querySelector('body');
-
+    var header = document.getElementById('header');
+  
     if (isNightMode) {
       // Night mode
       body.classList.add('night-mode');
       btn.style.backgroundImage = "url('/images/4444/moon.gif')";
       btn.style.backgroundColor = 'black';
+      header.style.textShadow = '4px 4px #0615e2';
     } else {
       // Bright mode
       body.classList.remove('night-mode');
       btn.style.backgroundImage = "url('/images/4444/world.gif')";
       btn.style.backgroundColor = '#0000FF';
+  
+      // Change text shadow color to black
+      header.style.textShadow = '6px 6px #000000';
     }
   }
+  
