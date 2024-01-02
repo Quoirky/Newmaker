@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<!-- State of The Bringing The Project To It's Original State (2000-2014) is Currently in BETA -->
 <html lang="en">
-<link href="/css/style.css" rel="stylesheet"/>
-<link href="/css/additional.css" rel="stylesheet">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+
 <head>
-<body>
-    <title>Quoirky: Early Access</title>
-    <div id="header">
-        <span style="transform: translate(-50%, -50%);">QUOIRKY.COM</span>
-    </div>
-    <div style="overflow: hidden;margin-top: 25px; margin-left: 70px;">
-        <iframe src="https://player.twitch.tv/?channel=quoirky&parent=quoirky.com"
-            style="float: left; width: 75%; aspect-ratio: 16/9;"></iframe>
-        <iframe id="twitch-chat-embed" src="https://www.twitch.tv/embed/quoirky/chat?darkpopout&parent=quoirky.com"
-            style="float: left; width: 350px; height: 774px;"></iframe>
-    </div>
-    <button class="btn" onclick="toggleNightMode()" style="background-color: black; background-image: url('/images/4444/moon.gif');"></button>
-    <script src="/javascript/darkmode.js"></script>
-    <script src="/javascript/isLiveBroadcast.js"></script>
-</body>
+  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/additional.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <title>Quoirky: Early Access</title>
 </head>
+
+<body>
+  <div id="header">
+    <nav class="left-nav">
+      <a href="https://www.youtube.com/watch?v=OTePvoLKp60" class="nav-link" target="_blank">Home</a>
+      <a href="https://www.youtube.com/watch?v=OTePvoLKp60" class="nav-link" target="_blank">About</a>
+    </nav>
+    <div class="logo">QUOIRKY.COM</div>
+    <nav class="right-nav">
+      <a href="https://www.youtube.com/watch?v=OTePvoLKp60" class="nav-link" target="_blank">Contact</a>
+      <a href="https://www.youtube.com/watch?v=OTePvoLKp60" class="nav-link" target="_blank">FAQ</a>
+    </nav>
+  </div>
+
+  <div style="overflow: hidden;margin-top: 25px; margin-left: 70px;">
+    <iframe src="https://player.twitch.tv/?channel=quoirky&parent=quoirky.com"
+      style="float: left; width: 75%; aspect-ratio: 16/9;"></iframe>
+    <iframe id="twitch-chat-embed" src="https://www.twitch.tv/embed/quoirky/chat?darkpopout&parent=quoirky.com"
+      style="float: left; width: 350px; height: 774px;"></iframe>
+  </div>
+
+  <button class="btn" onclick="toggleNightMode()"
+    style="background-color: black; background-image: url('/images/4444/moon.gif');"></button>
+  <script src="/javascript/darkmode.js"></script>
+  <script src="/javascript/isLiveBroadcast.js"></script>
+</body>
+
 </html>
