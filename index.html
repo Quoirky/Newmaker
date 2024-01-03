@@ -22,12 +22,14 @@
     </nav>
   </div>
 
-  <div style="overflow: hidden;margin-top: 25px; margin-left: 70px;">
+  <div style="overflow: hidden; margin-top: 25px; margin-left: 70px; display: flex;">
     <iframe src="https://player.twitch.tv/?channel=quoirky&parent=quoirky.com"
-      style="float: left; width: 75%; aspect-ratio: 16/9;"></iframe>
+      style="flex: 2; aspect-ratio: 16/9; max-width: calc(75% - 10px);"></iframe>
     <iframe id="twitch-chat-embed" src="https://www.twitch.tv/embed/quoirky/chat?darkpopout&parent=quoirky.com"
-      style="float: left; width: 350px; height: 774px;"></iframe>
+      style="flex: 1; max-width: 350px;"></iframe>
   </div>
+  
+  
 
   <button class="btn" onclick="toggleNightMode()"
     style="background-color: black; background-image: url('/images/4444/moon.gif');"></button>

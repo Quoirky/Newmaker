@@ -35,7 +35,7 @@
       // Bright mode
       body.classList.remove('night-mode');
       btn.style.backgroundImage = "url('/images/4444/world.gif')";
-      btn.style.backgroundColor = '#0000FF';
+      btn.style.backgroundColor = '#001aff';
   
       // Change text shadow color to black
       header.style.textShadow = '6px 6px #000000';

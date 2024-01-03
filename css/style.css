@@ -8,20 +8,20 @@
   src: url("/fonts/Fairymuffinroundpop.ttf") format("truetype");
 }
 
-/* header */
-
+/* Header styles */
 #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-repeat: no-repeat;
   background-size: 9%;
-  width: auto;
+  width: 100%;
   text-shadow: 4px 4px #0615e2;
+  box-sizing: border-box;
+  padding: 3px;
 }
 
-
-/* header text */
-
-#header,
-.text-container {
+#header, .text-container {
   display: flex;
   font-family: 'Cytone';
   color: white;
@@ -30,53 +30,47 @@
   margin: 0 auto;
   width: auto;
   scale: 90%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px;
-}
-
-/* Font styles for the navigation links */
-#header {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-nav.left-nav,
-nav.right-nav {
+/* Navigation styles */
+nav.left-nav, nav.right-nav {
   display: flex;
   align-items: center;
   font-size: 40px;
   margin-top: 20px;
 }
 
-nav.left-nav a {
-  margin-right: 10px;
+nav.left-nav a, nav.right-nav a {
+  margin: 0px 65px;
   text-decoration: none;
   color: white;
   font-family: 'Fairy';
-  margin: 0px 65px;
 }
 
-nav.right-nav a {
-  margin-left: 10px;
-  text-decoration: none;
-  color: white;
-  font-family: 'Fairy';
-  margin: 0px 65px;
-}
-
+/* Body styles */
 body {
-  background-color: #0000FF;
+  margin: 0;
+  padding: 0;
+  background-color: #001aff;
   /* Default bright mode color */
   transition: background-color 0.3s ease;
 }
 
+/* Night mode styles */
 .night-mode {
   background-color: black;
   /* Night mode color */
 }
 
+/* Container styles */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Button styles */
 .btn {
   position: fixed;
   top: 10px;
@@ -90,9 +84,7 @@ body {
   background-size: contain;
 }
 
-/* Start https://www.cursors-4u.com */
+/* Cursor styles */
 * {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur25.ani), url(https://cur.cursors-4u.net/cursors/cur-1/cur25.png), auto !important;
 }
-
-/* End https://www.cursors-4u.com */
