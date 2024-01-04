@@ -111,33 +111,6 @@ body {
   max-width: 350px;
   width: 100%; /* Ensure the embed doesn't exceed its parent width */
 }
-
-/* Mobile Warning Styles */
-#mobileWarning {
-  display: none;
-}
-
-#mobileWarning.visible {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  color: white;
-  font-family: 'Cytone';
-  text-align: center;
-  z-index: 1000;
-}
-
-.warning-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /* Cursor Styles */
 * {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur25.ani), url(https://cur.cursors-4u.net/cursors/cur-1/cur25.png), auto !important;

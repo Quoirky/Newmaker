@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var isAndroid = /Android/.test(userAgent);
 
     if (isIOS || isAndroid) {
-        var mobileWarning = document.getElementById('mobileWarning');
-        mobileWarning.classList.add('visible');
+        // Redirect to mobile_warning.html for mobile users
+        window.location.href = 'mobile_warning.html';
     }
 });
