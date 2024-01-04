@@ -1,3 +1,4 @@
+/* Font Styles */
 @font-face {
   font-family: 'Cytone';
   src: url("/fonts/Cytone-Regular.ttf") format("truetype");
@@ -8,7 +9,7 @@
   src: url("/fonts/Fairymuffinroundpop.ttf") format("truetype");
 }
 
-/* Header styles */
+/* Header Styles */
 #header {
   display: flex;
   justify-content: space-between;
@@ -33,7 +34,7 @@
   align-items: center;
 }
 
-/* Navigation styles */
+/* Navigation Styles */
 nav.left-nav, nav.right-nav {
   display: flex;
   align-items: center;
@@ -42,13 +43,18 @@ nav.left-nav, nav.right-nav {
 }
 
 nav.left-nav a, nav.right-nav a {
-  margin: 0px 65px;
+  margin: 0px 50px; /* Adjust the margin as needed */
   text-decoration: none;
   color: white;
   font-family: 'Fairy';
 }
 
-/* Body styles */
+/* Responsive Logo Size */
+.logo {
+  font-size: 4.5rem; /* Set an initial font size */
+}
+
+/* Body Styles */
 body {
   margin: 0;
   padding: 0;
@@ -57,24 +63,25 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Night mode styles */
+/* Night Mode Styles */
 .night-mode {
   background-color: black;
   /* Night mode color */
 }
 
-/* Container styles */
+/* Container Styles */
 .container {
   width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* Button styles */
+/* Button Styles */
 .btn {
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
+  z-index: 1001; /* Ensure it's above other elements */
   width: 40px;
   height: 40px;
   border: none;
@@ -84,7 +91,54 @@ body {
   background-size: contain;
 }
 
-/* Cursor styles */
+/* Twitch Styles */
+#twitch-container {
+  overflow: hidden;
+  margin-top: 25px;
+  margin-left: 70px;
+  display: flex;
+  width: 100%;
+}
+
+#twitch-player {
+  flex: 2;
+  aspect-ratio: 16/9;
+  max-width: calc(75% - 10px);
+}
+
+#twitch-chat-embed {
+  flex: 1;
+  max-width: 350px;
+  width: 100%; /* Ensure the embed doesn't exceed its parent width */
+}
+
+/* Mobile Warning Styles */
+#mobileWarning {
+  display: none;
+}
+
+#mobileWarning.visible {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  font-family: 'Cytone';
+  text-align: center;
+  z-index: 1000;
+}
+
+.warning-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cursor Styles */
 * {
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur25.ani), url(https://cur.cursors-4u.net/cursors/cur-1/cur25.png), auto !important;
 }
