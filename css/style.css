@@ -43,7 +43,7 @@ nav.left-nav, nav.right-nav {
 }
 
 nav.left-nav a, nav.right-nav a {
-  margin: 0px 50px; /* Adjust the margin as needed */
+  margin: 0px 40px; /* Adjust the margin as needed */
   text-decoration: none;
   color: white;
   font-family: 'Fairy';
