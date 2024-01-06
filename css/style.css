@@ -28,8 +28,8 @@
   color: white;
   font-size: calc(16px + 2.5vw);
   text-align: center;
-  margin: 0 auto;
-  width: auto;
+  margin: 0vw 2vw 0vw 0vw;
+  width: 90%; /* Adjusted width for better responsiveness */
   scale: 90%;
   align-items: center;
 }
@@ -38,20 +38,26 @@
 nav.left-nav, nav.right-nav {
   display: flex;
   align-items: center;
-  font-size: 40px;
-  margin-top: 20px;
+  font-size: 2.1vw; /* Adjusted font size for better responsiveness */
+  margin-top: 1.125vw; /* Adjusted margin for better spacing */
+  margin-right: 2.5vw; /* Added margin to create space from the Quoirky.com logo */
 }
 
 nav.left-nav a, nav.right-nav a {
-  margin: 0px 40px; /* Adjust the margin as needed */
+  margin: 0vw 2vw; /* Adjusted margin for better spacing */
   text-decoration: none;
   color: white;
   font-family: 'Fairy';
 }
 
+nav.right-nav {
+  margin-left: 2.5vw;
+
+}
+
 /* Responsive Logo Size */
 .logo {
-  font-size: 4.5rem; /* Set an initial font size */
+  font-size: 3.75vw; /* Set an initial font size */
 }
 
 /* Body Styles */
@@ -76,12 +82,13 @@ body {
   box-sizing: border-box;
 }
 
-/* Button styles */
+/* Button Styles */
 .btn {
-  margin-top: -2%;
-  margin-right: -5.25%;
-  width: 45px;
-  height: 45px;
+  position: fixed;
+  top: 0.6vh;
+  right: 0.3vw;
+  width: 2.3vw; /* Adjusted width for better responsiveness */
+  height: 2.3vw; /* Adjusted height for better responsiveness */
   border: none;
   cursor: pointer;
   background-color: black;
@@ -91,15 +98,13 @@ body {
   z-index: 100;
 }
 
-
-
 /* Twitch Styles */
 #twitch-container {
   overflow: hidden;
-  margin-top: 25px;
-  margin-left: 70px;
+  margin-top: 4vh; /* Adjusted margin for better spacing */
+  margin-left: 5vw; /* Adjusted margin for better spacing */
   display: flex;
-  width: 100%;
+  width: 90%; /* Adjusted width for better responsiveness */
 }
 
 #twitch-player {
@@ -111,7 +116,8 @@ body {
 #twitch-chat-embed {
   flex: 1;
   max-width: 350px;
-  width: 100%; /* Ensure the embed doesn't exceed its parent width */
+  width: 100%;
+  margin-right: 2vh;
 }
 /* Cursor Styles */
 * {
