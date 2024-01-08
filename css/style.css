@@ -9,8 +9,24 @@
   src: url("/fonts/Fairymuffinroundpop.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Large';
+  src: url("/fonts/Large.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: url("/fonts/Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Thin';
+  src: url("/fonts/Thin.ttf") format("truetype");
+}
+
 /* Header Styles */
 #header {
+  /* Header layout */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,45 +39,55 @@
 }
 
 #header, .text-container {
+  /* Header and text container styles */
   display: flex;
   font-family: 'Cytone';
   color: white;
   font-size: calc(16px + 2.5vw);
   text-align: center;
   margin: 0vw 2vw 0vw 0vw;
-  width: 90%; /* Adjusted width for better responsiveness */
+  width: 90%;
   scale: 90%;
   align-items: center;
 }
 
 /* Navigation Styles */
 nav.left-nav, nav.right-nav {
+  /* Navigation layout */
   display: flex;
   align-items: center;
-  font-size: 2.1vw; /* Adjusted font size for better responsiveness */
-  margin-top: 1.125vw; /* Adjusted margin for better spacing */
-  margin-right: 2.5vw; /* Added margin to create space from the Quoirky.com logo */
+  font-size: 2.1vw; 
+  margin-top: 1.125vw; 
+  margin-right: 2.5vw; 
 }
 
 nav.left-nav a, nav.right-nav a {
-  margin: 0vw 2vw; /* Adjusted margin for better spacing */
+  /* Navigation link styles */
+  margin: 0vw 2vw; 
   text-decoration: none;
   color: white;
   font-family: 'Fairy';
 }
 
 nav.right-nav {
-  margin-left: 2.5vw;
-
+  margin-left: 2.4vw;
 }
 
 /* Responsive Logo Size */
 .logo {
-  font-size: 3.75vw; /* Set an initial font size */
+  /* Logo size */
+  font-size: 3.75vw; 
+}
+
+a {
+  /* Anchor styles */
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 /* Body Styles */
 body {
+  /* Body styles */
   margin: 0;
   padding: 0;
   background-color: #001aff;
@@ -71,12 +97,13 @@ body {
 
 /* Night Mode Styles */
 .night-mode {
-  background-color: black;
   /* Night mode color */
+  background-color: black;
 }
 
 /* Container Styles */
 .container {
+  /* Container styles */
   width: 90%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -84,11 +111,12 @@ body {
 
 /* Button Styles */
 .btn {
+  /* Button styles */
   position: fixed;
   top: 0.6vh;
   right: 0.3vw;
-  width: 2.3vw; /* Adjusted width for better responsiveness */
-  height: 2.3vw; /* Adjusted height for better responsiveness */
+  width: 2.3vw; 
+  height: 2.3vw; 
   border: none;
   cursor: pointer;
   background-color: black;
@@ -100,26 +128,31 @@ body {
 
 /* Twitch Styles */
 #twitch-container {
+  /* Twitch container layout */
   overflow: hidden;
-  margin-top: 4vh; /* Adjusted margin for better spacing */
-  margin-left: 5vw; /* Adjusted margin for better spacing */
+  margin-top: 4vh; 
+  margin-left: 5vw;
   display: flex;
-  width: 90%; /* Adjusted width for better responsiveness */
+  width: 90%;
 }
 
 #twitch-player {
+  /* Twitch player styles */
   flex: 2;
   aspect-ratio: 16/9;
   max-width: calc(75% - 10px);
 }
 
 #twitch-chat-embed {
+  /* Twitch chat embed styles */
   flex: 1;
   max-width: 350px;
   width: 100%;
   margin-right: 2vh;
 }
+
 /* Cursor Styles */
 * {
+  /* Cursor styles */
   cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur25.ani), url(https://cur.cursors-4u.net/cursors/cur-1/cur25.png), auto !important;
 }
