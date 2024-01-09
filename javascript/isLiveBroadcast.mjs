@@ -1,4 +1,4 @@
-import fetch from 'https://quoirky.com/node_modules/node-fetch/node-fetch.js';
+import fetch from 'https://cdn.skypack.dev/node-fetch';
 
 const channelName = 'Quoirky';
 
