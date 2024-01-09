@@ -1,20 +1,27 @@
-import fetch from 'https://cdn.skypack.dev/node-fetch';
+import express from 'express';
+import fetch from 'node-fetch';
 
-const channelName = 'Quoirky';
+const app = express();
+const port = 3000;
 
-async function checkStreamStatus() {
+app.use(express.static('public'));
+
+app.get('/checkStreamStatus', async (req, res) => {
   try {
-    const response = await fetch(`https://www.twitch.tv/${channelName}`);
+    const response = await fetch('https://www.twitch.tv/Quoirky');
     const text = await response.text();
 
     if (text.includes('"isLiveBroadcast":true')) {
-      console.log(`${channelName} is live`);
+      res.send('Quoirky is live');
     } else {
-      console.log(`${channelName} is not live`);
+      res.send('Quoirky is not live');
     }
   } catch (error) {
     console.error('Error fetching Twitch page:', error);
+    res.status(500).send('Internal Server Error');
   }
-}
+});
 
-checkStreamStatus();
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
+});
